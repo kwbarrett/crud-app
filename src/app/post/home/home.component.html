@@ -1,0 +1,18 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scop="col">Id</th>
+        <th scop="col">Title</th>
+        <th scop="col">Body</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let post of posts">
+        <th scope="row"> {{ post.id }} </th>
+        <td> {{ post.title }} </td>
+        <td> {{ post.body }} </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
