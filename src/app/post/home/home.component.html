@@ -2,9 +2,10 @@
   <table class="table">
     <thead>
       <tr>
-        <th scop="col">Id</th>
-        <th scop="col">Title</th>
-        <th scop="col">Body</th>
+        <th scope="col">Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Body</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
@@ -12,6 +13,10 @@
         <th scope="row"> {{ post.id }} </th>
         <td> {{ post.title }} </td>
         <td> {{ post.body }} </td>
+        <td nowrap>
+          <a href="" class="btn btn-primary" [routerLink]="['/post/edit', post.id]">Edit</a>
+          <button type="button" (click)="deletePost( post.id )" class="btn btn-danger ms-2">Delete</button>
+        </td>
       </tr>
     </tbody>
   </table>

@@ -17,4 +17,16 @@ export class PostService {
     return this.http.post( 'https://jsonplaceholder.typicode.com/posts', data );
   }
 
+  edit( id: number ){
+    return this.http.get<Post>( `https://jsonplaceholder.typicode.com/posts/${id}` );
+  }
+
+  update( data: Post ){
+    return this.http.put<Post>( `https://jsonplaceholder.typicode.com/posts/${data.id}`, data );
+  }
+
+  delete( id: number ){
+    return this.http.delete<Post>( `https://jsonplaceholder.typicode.com/posts/${id}` );
+  }
+
 }
