@@ -5,7 +5,7 @@ import { PostRoutingModule } from './post-routing.module';
 import { HomeComponent } from './home/home.component';
 import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,8 @@ import { EditComponent } from './edit/edit.component';
   ],
   imports: [
     CommonModule,
-    PostRoutingModule
+    PostRoutingModule,
+    FormsModule
   ]
 })
 export class PostModule { }

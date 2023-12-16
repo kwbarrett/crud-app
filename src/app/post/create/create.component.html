@@ -1,1 +1,15 @@
-<p>create works!</p>
+<div class="container">
+  <legend>Create Post</legend>
+  <form>
+    <input type="hidden" [(ngModel)]="formData.userId" name="userId" value="1">
+    <div class="mb-3">
+      <label for="txtTitle" class="form-label">Title</label>
+      <input type="text" [(ngModel)]="formData.title" class="form-control" name="title" id="txtTitle">
+    </div>
+    <div class="mb-3">
+      <label for="txtBody" class="form-label">Body</label>
+      <textarea name="Body" [(ngModel)]="formData.body" id="txtBody" cols="30" rows="10" class="form-control"></textarea>
+    </div>
+    <button type="button" (click)="create()" class="btn btn-primary"> Create</button>
+  </form>
+</div>
